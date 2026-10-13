@@ -2,7 +2,7 @@ import http from 'k6/http';
 import { check, sleep } from 'k6';
 
 export default function () {
-  const url = 'https://ifvest.com.br/api/v1/essays/my-essays';
+  const url = '';
 
   // 1. Teste simulando a falha (sem o token no header)
   let resSemToken = http.get(url, {
@@ -16,7 +16,7 @@ export default function () {
   });
 
   // 2. Teste com o token válido (quando copiado dos Request Headers do navegador)
-  const tokenValido = 'COLE_AQUI_O_TOKEN_SE_ENCONTRAR_NOS_HEADERS';
+  const tokenValido = '';
   
   let resComToken = http.get(url, {
     headers: {
